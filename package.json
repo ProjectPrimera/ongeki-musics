@@ -1,0 +1,17 @@
+{
+  "dependencies": {},
+  "devDependencies": {
+    "@azu/github-label-setup": "^3.0.1",
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "3.1.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "scripts": {
+    "commit": "git-cz",
+    "label": " github-label-setup -l ../../.github/labels.json"
+  }
+}
