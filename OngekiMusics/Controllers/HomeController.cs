@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using ongeki_musics.Models;
+using OngekiMusics.Models;
 using System.Diagnostics;
 
-namespace ongeki_musics.Controllers {
+namespace OngekiMusics.Controllers {
     public class HomeController : Controller {
         private readonly ILogger<HomeController> _logger;
 

@@ -3,12 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ongeki-musics", "ongeki-musics\ongeki-musics.csproj", "{C51C1600-BDAC-4416-A1F9-2A15B3510282}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E379CFDB-E6B1-469A-ADC2-C6F332DB3D0C}"
-	ProjectSection(SolutionItems) = preProject
-		.editorconfig = .editorconfig
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OngekiMusics", "OngekiMusics\OngekiMusics.csproj", "{AA4C38A9-8915-46D0-B3A8-F14AC28046C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C51C1600-BDAC-4416-A1F9-2A15B3510282}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C51C1600-BDAC-4416-A1F9-2A15B3510282}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C51C1600-BDAC-4416-A1F9-2A15B3510282}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C51C1600-BDAC-4416-A1F9-2A15B3510282}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA4C38A9-8915-46D0-B3A8-F14AC28046C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA4C38A9-8915-46D0-B3A8-F14AC28046C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA4C38A9-8915-46D0-B3A8-F14AC28046C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA4C38A9-8915-46D0-B3A8-F14AC28046C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {1A5FEE1A-B580-441B-8C12-CFE9DFB84DB2}
+		SolutionGuid = {B52EF4A0-09BC-4684-8EB0-E4115732006D}
 	EndGlobalSection
 EndGlobal

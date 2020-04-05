@@ -1,4 +1,4 @@
-namespace ongeki_musics.Models {
+namespace OngekiMusics.Models {
     public class ErrorViewModel {
         public string RequestId { get; set; }
 

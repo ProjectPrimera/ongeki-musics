@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace ongeki_musics {
+namespace OngekiMusics {
     public class Program {
         public static void Main(string[] args) {
             CreateHostBuilder(args).Build().Run();

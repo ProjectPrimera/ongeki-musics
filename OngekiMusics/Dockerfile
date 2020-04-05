@@ -6,16 +6,16 @@ EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
-COPY ["ongeki-musics/ongeki-musics.csproj", "ongeki-musics/"]
-RUN dotnet restore "ongeki-musics/ongeki-musics.csproj"
+COPY ["OngekiMusics/OngekiMusics.csproj", "OngekiMusics/"]
+RUN dotnet restore "OngekiMusics/OngekiMusics.csproj"
 COPY . .
-WORKDIR "/src/ongeki-musics"
-RUN dotnet build "ongeki-musics.csproj" -c Release -o /app/build
+WORKDIR "/src/OngekiMusics"
+RUN dotnet build "OngekiMusics.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "ongeki-musics.csproj" -c Release -o /app/publish
+RUN dotnet publish "OngekiMusics.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "ongeki-musics.dll"]
+ENTRYPOINT ["dotnet", "OngekiMusics.dll"]
