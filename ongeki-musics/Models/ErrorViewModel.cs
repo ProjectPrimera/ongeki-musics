@@ -1,5 +1,3 @@
-using System;
-
 namespace ongeki_musics.Models {
     public class ErrorViewModel {
         public string RequestId { get; set; }
