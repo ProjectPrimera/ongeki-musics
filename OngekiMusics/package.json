@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "materialize-css": "^1.0.0-rc.2"
+    "materialize-css": "^1.0.0-rc.2",
+    "vue": "^2.6.11"
   },
   "devDependencies": {
     "autoprefixer": "^9.7.5",
