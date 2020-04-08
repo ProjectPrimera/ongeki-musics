@@ -1,4 +1,8 @@
 {
+  "name": "ongeki-musics-core",
+  "repository": "https://github.com/project-primera/ongeki-musics.git",
+  "author": "Slime_hatena <git@aki-memo.net>",
+  "license": "AGPL-3.0",
   "dependencies": {
     "materialize-css": "^1.0.0-rc.2",
     "vue": "^2.6.11"
