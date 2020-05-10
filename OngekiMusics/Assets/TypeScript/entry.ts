@@ -1,4 +1,3 @@
 import '../Scss/entry.scss';
 
-import './fontawesome.ts';
-
+import './sidebar.ts';

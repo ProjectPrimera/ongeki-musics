@@ -1,0 +1,24 @@
+header, main, footer {
+    margin-left: 300px;
+}
+
+main{
+    padding: 0 .8rem;
+}
+
+.brand-logo{
+    padding-left: 1em !important;
+}
+
+@media only screen and (max-width : 992px) {
+    header, main, footer {
+        margin-left: 0;
+    }
+    .brand-logo{
+        padding-left: 0 !important;
+    }
+}
+
+.sidenav .collapsible>.active .collapsible-header .chevron {
+    transform: rotate(90deg);
+}
