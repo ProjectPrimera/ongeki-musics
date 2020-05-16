@@ -1,18 +1,19 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInje
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
 namespace OngekiMusics {
     public class Startup {
-        public Startup(I
-            Configuration
+        public Startup(IConfiguration configuration) {
+            Configuration = configuration;
         }
 
-        p
+        public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. U
+        // This method gets called by the runtime. Use this method to add services to the container.
+        public void ConfigureServices(IServiceCollection services) {
 
             services.AddControllersWithViews()
 #if DEBUG
@@ -22,22 +23,22 @@ namespace OngekiMusics {
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        p
-
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env) {
+            if(env.IsDevelopment()) {
                 app.UseDeveloperExceptionPage();
             } else {
-                app.UseExceptionHandl
+                app.UseExceptionHandler("/Home/Error");
             }
-            app.UseS
+            app.UseStaticFiles();
 
-            a
+            app.UseRouting();
 
+            app.UseAuthorization();
 
-
-
-                endpoints.MapContro
-
-                    pattern: "{controller=H
+            app.UseEndpoints(endpoints => {
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
