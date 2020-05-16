@@ -4,8 +4,7 @@
   "author": "Slime_hatena <git@aki-memo.net>",
   "license": "AGPL-3.0",
   "dependencies": {
-    "materialize-css": "^1.0.0-rc.2",
-    "vue": "^2.6.11"
+    "materialize-css": "^1.0.0-rc.2"
   },
   "devDependencies": {
     "autoprefixer": "^9.7.5",
