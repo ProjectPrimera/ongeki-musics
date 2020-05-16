@@ -1,8 +1,10 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System;
 
 namespace OngekiMusics {
     public class Startup {
@@ -14,6 +16,18 @@ namespace OngekiMusics {
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services) {
+            var server = Configuration?["Connection:Server"] ?? "server";
+            var port = Configuration?["Connection:Port"] ?? "3306";
+            var database = Configuration?["Connection:Database"] ?? "db";
+            var user = Configuration?["Connection:User"] ?? "user";
+            var password = Configuration?["Connection:Password"] ?? "password";
+
+            services.AddDbContextPool<Models.ApplicationDbContext>(options => options
+                .UseMySql($"Server={server};port={port};Database={database};User={user};Password={password};", mySqlOptions => {
+                    mySqlOptions.EnableRetryOnFailure(30, TimeSpan.FromSeconds(10), null);
+                    mySqlOptions.CharSetBehavior(CharSetBehavior.NeverAppend);
+                }
+            ));
 
             services.AddControllersWithViews()
 #if DEBUG
