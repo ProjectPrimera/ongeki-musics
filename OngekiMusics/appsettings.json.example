@@ -6,5 +6,12 @@
       "Microsoft.Hosting.Lifetime": "Information"
     }
   },
-  "AllowedHosts": "*"
+  "AllowedHosts": "*",
+  "Connection": {
+      "Server": "127.0.0.1",
+      "Port": "3306",
+      "Database": "ongeki_music",
+      "User": "root",
+      "Password": "password"
+  }
 }
