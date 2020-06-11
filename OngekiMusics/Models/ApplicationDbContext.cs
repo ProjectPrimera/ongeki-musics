@@ -6,6 +6,7 @@ namespace OngekiMusics.Models {
     public class ApplicationDbContext : DbContext {
         public DbSet<SeasonalVersion> SeasonalVersions { get; set; }
         public DbSet<MusicCategory> MusicCategories { get; set; }
+        public DbSet<Chapter> Chapters { get; set; }
 
         public ApplicationDbContext(DbContextOptions options) : base(options) {
             //
@@ -15,6 +16,7 @@ namespace OngekiMusics.Models {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<SeasonalVersion>().UseTimestampedProperty();
             modelBuilder.Entity<MusicCategory>().UseTimestampedProperty();
+            modelBuilder.Entity<Chapter>().UseTimestampedProperty();
         }
     }
 }
