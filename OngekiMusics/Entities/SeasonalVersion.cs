@@ -1,0 +1,13 @@
+using System;
+using System.ComponentModel.DataAnnotations;
+
+namespace OngekiMusics.Entities {
+    public class SeasonalVersion : ITimestampable {
+        [Key]
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public DateTime ReleasedAt { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
+    }
+}
